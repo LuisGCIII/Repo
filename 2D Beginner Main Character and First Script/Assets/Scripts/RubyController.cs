@@ -20,8 +20,10 @@ public class RubyController : MonoBehaviour
         Debug.Log("horizontal :" + horizontal);
         Debug.Log("vertical :" + vertical);
         Vector2 position = transform.position;
-        position.x = position.x + .3f *horizontal;
-        position.y = position.y + .3f * vertical;
+        position.x = position.x + 5.0f * horizontal *
+     Time.deltaTime;
+        position.y = position.y + 5.0f * vertical *
+     Time.deltaTime;
         transform.position = position;
 
     }
